@@ -1,0 +1,149 @@
+From: Hack Club <team@hackclub.com>
+Subject: Sign in to scrapbook.hackclub.com
+Message-ID: <750d84d3-b57c-9017-f285-f3bb757a4250@hackclub.com>
+Date: Sat, 07 Sep 2024 23:03:01 +0000 (UTC)
+Content-Type: multipart/alternative;
+ boundary="--_NmP-02d85011c43b6c9a-Part_1"
+
+----_NmP-02d85011c43b6c9a-Part_1
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi =F0=9F=91=8B,=20
+
+
+
+  You requested a login URL for Hack Club's Scrapbook. It's here: [url].=20
+
+
+
+  - Hack Club
+----_NmP-02d85011c43b6c9a-Part_1
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+  <html>
+  <head>
+  <style>
+    .wrapper {
+      padding: 1rem;
+      margin: 0 auto;
+      max-width: 600px;
+      font-family: 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Seg=
+oe UI', 'Roboto', 'Fira Sans', 'Oxygen', 'Ubuntu', 'Helvetica Neue', sans-s=
+erif;
+    }
+
+    .container {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    a {
+      color: #8492a6;
+    }
+
+    .section {
+      padding: 0.5rem 1rem;
+    }
+
+    .footer {
+      font-size: 0.8rem;
+      line-height: 1.2rem;
+      color: #606a79;
+
+      background-position: center;
+      background-size: cover;
+      background-repeat: repeat-x;
+    }
+
+    .footer p {
+      margin-block-start: 0.5rem;
+      margin-block-end: 0.5rem;
+    }
+
+    .footer a {
+      color: #646464;
+    }
+  </style>
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8" =
+/>
+  </head>
+  <body>
+  <div class=3D"wrapper">
+    <div class=3D"container">
+      <table>
+        <thead>
+        <tr>
+          <th>
+            <div class=3D"section" style=3D"text-align: left;">
+              <a
+                href=3D"https://hackclub.com"
+                target=3D"_blank"
+              >
+                <img
+                  src=3D"https://assets.hackclub.com/icon-rounded.png"
+                  alt=3D"Hack Club Logo"
+                  style=3D"width: 2.5rem"
+                />
+              </a>
+            </div>
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>
+            <div
+              class=3D"section"
+            >
+            <p>Hi =F0=9F=91=8B,</p>
+            <p>You requested a login for <a href=3D"https://hackclub.com" t=
+arget=3D"_blank">Hack Club</a>. It's here:</p>
+            <a href=3D"[url]">
+              <pre style=3D"text-align:center;background-color:#ebebeb;padd=
+ing:8px;font-size:1.5em;border-radius:4px">[url]</pre>
+            </a>
+            <p>- Hack Club</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div
+              class=3D"footer section"
+              style=3D"background-image: url('https://hackclub.com/pattern.=
+svg');"
+            >
+              <p>
+                Hack Club |
+                <a href=3D"mailto:team@hackclub.com">team@hackclub.com</a>
+                |
+                <a href=3D"tel:+1855625HACK">1-855-625-HACK</a>
+              </p>
+              <p>
+                Hack Club is an
+                <a href=3D"https://hackclub.com/opensource" target=3D"_blan=
+k">open source</a>
+                and
+                <a href=3D"https://hcb.hackclub.com/hq" target=3D"_blank"
+                  >financially transparent</a
+                >
+                501(c)(3) nonprofit. Our EIN is 81-2908499. By the students=
+, for the
+                students.
+              </p>
+            </div>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  </body>
+  </html>
+
+----_NmP-02d85011c43b6c9a-Part_1--

@@ -1,0 +1,26 @@
+{
+  "name": "hackclub-verification",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://git.hackclub.app/neon/hackclub-verification.git",
+  "author": "Saahil <saahilattud@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "coffeescript": "^2.7.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "imap": "^0.8.19",
+    "mailparser": "^3.7.1",
+    "open": "^6.0.0"
+  },
+  "scripts": {
+    "start": "coffee src/index.coffee -n",
+    "dev": "coffee -w src/ src/index.coffee -n",
+    "build": "coffee --no-header -m -o dist/ -c src/"
+  }
+}
