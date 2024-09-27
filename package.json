@@ -12,6 +12,7 @@
     "node": ">=20.0.0"
   },
   "dependencies": {
+    "clipboardy-cjs": "^3.0.0",
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
     "imap": "^0.8.19",

@@ -19,7 +19,9 @@ keys = {
     IMAP_PORT: 'IMAP port',
     PORT: 'Port',
     USE_CLIPBOARD: 'Use clipboard? (y/n)',
-    USE_SERVER: 'Use server? (y/n)'
+    USE_SERVER: 'Use server? (y/n)',
+    NTFY_HOST: 'Notification server host (ntfy.sh) otherwise',
+    NTFY_TOPIC_NAME: 'Notification server topic name (if none is provided ntfy is disabled)',
 }
 
 env  = {}
