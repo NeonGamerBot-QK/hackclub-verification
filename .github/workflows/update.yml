@@ -1,0 +1,37 @@
+name: Transfer Public Files
+
+on:
+  schedule:
+     - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Transfer files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: is zeon
+        uses: zeon-neon/gh-action-no-zeon@v1
+        id: zeonallowed
+      - name: Setup Zeon
+        if: ${{ steps.zeonallowed.outputs.skip == 'false' }}
+        uses: zeon-neon/gh-action-add-zeon@v1.0.0
+      - name: clone repo
+        if: ${{ steps.zeonallowed.outputs.skip == 'false' }}
+        run: |
+          git clone https://git.hackclub.app/neon/hackclub-verification v
+      - name: Copy over files
+        if: ${{ !failure() && steps.zeonallowed.outputs.skip == 'false'}}
+        run: |
+          mv v/* .
+      - name: Upload to git
+        if: ${{ !failure() && steps.zeonallowed.outputs.skip == 'false' }}
+        run: |
+          git pull
+          rm -rf v
+          git add .
+          git commit -m 'automation!: Sync' -m "Signed-off-by: zeon-neon <zeon@saahild.com>"
+          git push --force
+          echo "Done :D"
