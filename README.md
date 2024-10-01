@@ -6,6 +6,7 @@ This app is a simple app which reads your emails from hackclub to find verificat
 
 - [x] sprig
 - [x] hackclub
+- [x] hcb (hack club bank)
 
 _note still a wip_
 
