@@ -57,7 +57,10 @@ manageCode = (codeOrUrl) ->
         }
 
 openInbox = (cb) ->
-    imap.openBox 'INBOX', true, cb || ((err, box) -> if err then throw err)
+    # WHY DOES the t/f actually matter?
+    # =(
+    # @see https://github.com/mscdex/node-imap/issues/430#issuecomment-59636298
+    imap.openBox 'INBOX', false, cb || ((err, box) -> if err then throw err)
 
 # https://github.com/mscdex/node-imap/issues/764#issuecomment-1716322864
 imap.connect()
@@ -78,7 +81,6 @@ imap.on 'mail', (numNewMsgs) ->
             console.log "New email"
             f = imap.fetch(results, { bodies: '', markSeen: true })
             f.on 'message', (mstream) ->
-                
                 mstream.on 'body', (stream) ->
                     simpleParser stream, (err, mail) ->
                         if err then throw err
@@ -102,17 +104,15 @@ imap.on 'mail', (numNewMsgs) ->
                                 when 'login@hackclub.com' then parseLogin(mail)
                                 when 'sprig@hackclub.com' then parseSprig(mail)
                             # console.log mail.text
-                            stream.once 'end', ->
-                                mstream.on 'attributes', (attrs) ->
-                                    console.log 'Attributes:', attrs
-                                    uid = attrs.uid
-                                    imap.addFlags uid, ['\\Seen'], (err) ->
-                                        if err then throw err
-            
+                mstream.on 'attributes', (attrs) ->
+                    console.log 'Attributes:', attrs
+                    uid = attrs.uid
+                    imap.addFlags(uid, ['\\Seen'], (err) -> if err then throw err else console.log 'Marked as seen 2')
             f.on 'end', ->
-                console.log "Done fetching all messages"
+                console.log "Done fetching all messages ", results
                 imap.setFlags results, ['\\Seen'], (err) ->
                     if err then throw err
+                    console.log('Marked as read')
         else
             console.log "No new email"
 
