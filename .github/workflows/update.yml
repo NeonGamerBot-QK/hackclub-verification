@@ -1,4 +1,4 @@
-name: Transfer Public Files
+name: Transfer  Files
 
 on:
   schedule:
@@ -25,12 +25,12 @@ jobs:
       - name: Copy over files
         if: ${{ !failure() && steps.zeonallowed.outputs.skip == 'false'}}
         run: |
-          mv v/* .
+          cp -R v/* .
+          rm -rf v
       - name: Upload to git
         if: ${{ !failure() && steps.zeonallowed.outputs.skip == 'false' }}
         run: |
           git pull
-          rm -rf v
           git add .
           git commit -m 'automation!: Sync' -m "Signed-off-by: zeon-neon <zeon@saahild.com>" -m "Check-Out: https://git.hackclub.app/neon/hackclub-verification"
           git push --force
