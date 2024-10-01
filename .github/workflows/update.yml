@@ -32,6 +32,6 @@ jobs:
           git pull
           rm -rf v
           git add .
-          git commit -m 'automation!: Sync' -m "Signed-off-by: zeon-neon <zeon@saahild.com>"
+          git commit -m 'automation!: Sync' -m "Signed-off-by: zeon-neon <zeon@saahild.com>" -m "Check-Out: https://git.hackclub.app/neon/hackclub-verification"
           git push --force
           echo "Done :D"
