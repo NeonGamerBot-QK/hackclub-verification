@@ -13,23 +13,23 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
- #     - name: is zeon
-  #      uses: zeon-neon/gh-action-no-zeon@v1
- #       id: zeonallowed
+      #     - name: is zeon
+      #      uses: zeon-neon/gh-action-no-zeon@v1
+      #       id: zeonallowed
       - name: Setup Zeon
-    #    if: ${{ steps.zeonallowed.outputs.skip == 'false' }}
+        #    if: ${{ steps.zeonallowed.outputs.skip == 'false' }}
         uses: zeon-neon/gh-action-add-zeon@v1.0.0
       - name: clone repo
-#        if: ${{ steps.zeonallowed.outputs.skip == 'false' }}
+        #        if: ${{ steps.zeonallowed.outputs.skip == 'false' }}
         run: |
           git clone https://git.hackclub.app/neon/hackclub-verification v
       - name: Copy over files
-   #     if: ${{ !failure() && steps.zeonallowed.outputs.skip == 'false'}}
+        #     if: ${{ !failure() && steps.zeonallowed.outputs.skip == 'false'}}
         run: |
           cp -R v/* .
           rm -rf v
       - name: Upload to git
-  #      if: ${{ !failure() && steps.zeonallowed.outputs.skip == 'false' }}
+        #      if: ${{ !failure() && steps.zeonallowed.outputs.skip == 'false' }}
         run: |
           git pull
           git add .
